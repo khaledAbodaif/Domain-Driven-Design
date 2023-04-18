@@ -90,89 +90,170 @@ there is many solutions for this but you can choose or event create a new one as
 **Based on the 3 layers**
 
 app/
+
+
 ├── Domain/
+
 │   ├── Order/
+
 │   │   ├── Order.php
+
 │   │   ├── OrderRepository.php
+
 │   │   ├── OrderService.php
+
 │   │   ├── Events/
+
 │   │   │   ├── OrderCreated.php
+
 │   │   │   ├── OrderUpdated.php
 │   │   │   └── ...
+
 │   │   └── ValueObjects/
+
 │   │       ├── OrderStatus.php
+
 │   │       ├── OrderItem.php
+
 │   │       └── ...
+
 │   ├── Customer/
+
 │   │   ├── Customer.php
+
 │   │   ├── CustomerRepository.php
+
 │   │   ├── CustomerService.php
+
 │   │   ├── Events/
+
 │   │   │   ├── CustomerCreated.php
+
 │   │   │   ├── CustomerUpdated.php
+
 │   │   │   └── ...
+
 │   │   └── ValueObjects/
+
 │   │       ├── Name.php
+
 │   │       ├── Email.php
+
 │   │       └── ...
+
 │   └── ...
+
 ├── Infrastructure/
+
 │   ├── Persistence/
+
 │   │   ├── Repositories/
+
 │   │   │   ├── EloquentOrderRepository.php
+
 │   │   │   ├── EloquentCustomerRepository.php
+
 │   │   │   └── ...
+
 │   │   └── Migrations/
+
 │   │       ├── 2021_01_01_create_orders_table.php
+
 │   │       ├── 2021_01_02_create_customers_table.php
+
 │   │       └── ...
+
 │   ├── Messaging/
+
 │   │   ├── EventHandlers/
+
 │   │   │   ├── OrderCreatedHandler.php
+
 │   │   │   ├── CustomerCreatedHandler.php
+
 │   │   │   └── ...
+
 │   │   └── ...
+
 │   ├── Services/
+
 │   │   ├── PaymentService.php
+
 │   │   ├── ShippingService.php
+
 │   │   └── ...
+
 │   └── ...
+
 └── Application/
+
 ├── Http/
+
 │   ├── Controllers/
+
 │   │   ├── OrderController.php
+
 │   │   ├── CustomerController.php
+
 │   │   └── ...
+
 │   └── ...
+
 ├── Console/
+
 │   ├── Commands/
+
 │   │   ├── ProcessOrdersCommand.php
+
 │   │   ├── SendEmailCommand.php
+
 │   │   └── ...
+
 │   └── ...
+
 ├── Views/
+
 │   ├── orders/
+
 │   ├── customers/
+
 │   └── ...
+
 ├── Providers/
+
 │   ├── AppServiceProvider.php
+
 │   ├── DomainServiceProvider.php
+
 │   ├── InfrastructureServiceProvider.php
+
 │   └── ...
+
 └── ...
+
 
 **other one based on domain layer**
 
 app/Domain/Invoices/
+
 ├── Aildctions
+
 ├── QueryBuers
+
 ├── Collections
+
 ├── DataTransferObjects
+
 ├── Events
+
 ├── Exceptions
+
 ├── Listeners
+
 ├── Models
+
 ├── Rules
+
 └── States
 
 app/Application/Admin/
