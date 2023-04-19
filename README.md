@@ -111,183 +111,102 @@ There are many solutions for this but you can choose or even create a new one as
 
 **Based on the 3 layers**
 
-app/
-
-├── Domain/
-
-│   ├── Order/
-
-│   │   ├── Order.php
-
-│   │   ├── OrderRepository.php
-
-│   │   ├── OrderService.php
-
-│   │   ├── Events/
-
-│   │   │   ├── OrderCreated.php
-
-│   │   │   ├── OrderUpdated.php
-
-│   │   │   └── ...
-
-│   │   └── ValueObjects/
-
-│   │       ├── OrderStatus.php
-
-│   │       ├── OrderItem.php
-
-│   │       └── ...
-
-│   ├── Customer/
-
-│   │   ├── Customer.php
-
-│   │   ├── CustomerRepository.php
-
-│   │   ├── CustomerService.php
-
-│   │   ├── Events/
-
-│   │   │   ├── CustomerCreated.php
-
-│   │   │   ├── CustomerUpdated.php
-
-│   │   │   └── ...
-
-│   │   └── ValueObjects/
-
-│   │       ├── Name.php
-
-│   │       ├── Email.php
-
-│   │       └── ...
-
-│   └── ...
-
-├── Infrastructure/
-
-│   ├── Persistence/
-
-│   │   ├── Repositories/
-
-│   │   │   ├── EloquentOrderRepository.php
-
-│   │   │   ├── EloquentCustomerRepository.php
-
-│   │   │   └── ...
-
-│   │   └── Migrations/
-
-│   │       ├── 2021_01_01_create_orders_table.php
-
-│   │       ├── 2021_01_02_create_customers_table.php
-
-│   │       └── ...
-
-│   ├── Messaging/
-
-│   │   ├── EventHandlers/
-
-│   │   │   ├── OrderCreatedHandler.php
-
-│   │   │   ├── CustomerCreatedHandler.php
-
-│   │   │   └── ...
-
-│   │   └── ...
-
-│   ├── Services/
-
-│   │   ├── PaymentService.php
-
-│   │   ├── ShippingService.php
-
-│   │   └── ...
-
-│   └── ...
-
-└── Application/
-
-    ├── Http/
-
-    │   ├── Controllers/
-
-    │   │   ├── OrderController.php
-
-    │   │   ├── CustomerController.php
-
+    app/
+    ├── Domain/
+    │   ├── Order/
+    │   │   ├── Order.php
+    │   │   ├── OrderRepository.php
+    │   │   ├── OrderService.php
+    │   │   ├── Events/
+    │   │   │   ├── OrderCreated.php
+    │   │   │   ├── OrderUpdated.php
+    │   │   │   └── ...
+    │   │   └── ValueObjects/
+    │   │       ├── OrderStatus.php
+    │   │       ├── OrderItem.php
+    │   │       └── ...
+    │   ├── Customer/
+    │   │   ├── Customer.php
+    │   │   ├── CustomerRepository.php
+    │   │   ├── CustomerService.php
+    │   │   ├── Events/
+    │   │   │   ├── CustomerCreated.php
+    │   │   │   ├── CustomerUpdated.php
+    │   │   │   └── ...
+    │   │   └── ValueObjects/
+    │   │       ├── Name.php
+    │   │       ├── Email.php
+    │   │       └── ...
+    │   └── ...
+    ├── Infrastructure/
+    │   ├── Persistence/
+    │   │   ├── Repositories/
+    │   │   │   ├── EloquentOrderRepository.php
+    │   │   │   ├── EloquentCustomerRepository.php
+    │   │   │   └── ...
+    │   │   └── Migrations/
+    │   │       ├── 2021_01_01_create_orders_table.php
+    │   │       ├── 2021_01_02_create_customers_table.php
+    │   │       └── ...
+    │   ├── Messaging/
+    │   │   ├── EventHandlers/
+    │   │   │   ├── OrderCreatedHandler.php
+    │   │   │   ├── CustomerCreatedHandler.php
+    │   │   │   └── ...
     │   │   └── ...
-
-    │   └── ...
-
-    ├── Console/
-
-    │   ├── Commands/
-
-    │   │   ├── ProcessOrdersCommand.php
-
-    │   │   ├── SendEmailCommand.php
-
+    │   ├── Services/
+    │   │   ├── PaymentService.php
+    │   │   ├── ShippingService.php
     │   │   └── ...
-
     │   └── ...
-
-    ├── Views/
-
-    │   ├── orders/
-
-    │   ├── customers/
-
-    │   └── ...
-
-    ├── Providers/
-
-    │   ├── AppServiceProvider.php
-
-    │   ├── DomainServiceProvider.php
-
-    │   ├── InfrastructureServiceProvider.php
-
-    │   └── ...
-
-    └── ...
+    └── Application/
+        ├── Http/
+        │   ├── Controllers/
+        │   │   ├── OrderController.php
+        │   │   ├── CustomerController.php
+        │   │   └── ...
+        │   └── ...
+        ├── Console/
+        │   ├── Commands/
+        │   │   ├── ProcessOrdersCommand.php
+        │   │   ├── SendEmailCommand.php
+        │   │   └── ...
+        │   └── ...
+        ├── Views/
+        │   ├── orders/
+        │   ├── customers/
+        │   └── ...
+        ├── Providers/
+        │   ├── AppServiceProvider.php
+        │   ├── DomainServiceProvider.php
+        │   ├── InfrastructureServiceProvider.php
+        │   └── ...
+        └── ...
 
 
 **other one based on domain layer**  ( Domain oriented)
 
 app/Domain/Invoices/
 
-    ├── Aildctions
-    
-    ├── QueryBuers
-    
-    ├── Collections
-    
-    ├── DataTransferObjects
-    
-    ├── Events
-    
-    ├── Exceptions
-    
-    ├── Listeners
-    
-    ├── Models
-    
-    ├── Rules
-    
-    └── States
+
+
+      ├── Aildctions
+        ├── QueryBuers
+        ├── Collections
+        ├── DataTransferObjects
+        ├── Events
+        ├── Exceptions
+        ├── Listeners
+        ├── Models
+        ├── Rules
+        └── States
 
 app/Application/Admin/
 
     ├── Controllers
-    
     ├── Middlewares
-    
     ├── Requests
-    
     ├── Resources
-    
     └── ViewModels
 
 
@@ -342,3 +261,4 @@ If you have a
 - https://medium.com/microtica/the-concept-of-domain-driven-design-explained-3184c0fd7c3f
 - https://koalafacade.github.io/
 - https://learn.microsoft.com/en-us/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/ddd-oriented-microservice
+
