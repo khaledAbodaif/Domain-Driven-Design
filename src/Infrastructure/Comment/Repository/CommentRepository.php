@@ -1,6 +1,6 @@
 <?php
 
-class PostRepository extends  BasePostRepository implements PostRepositoryInterface
+class CommentRepository extends  BasePostRepository implements PostRepositoryInterface
 {
 
     public function __construct(Post $model)

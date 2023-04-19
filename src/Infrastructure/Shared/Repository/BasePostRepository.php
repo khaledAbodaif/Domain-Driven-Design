@@ -1,6 +1,6 @@
 <?php
 
-class BaseRepository implements RepositoryInterface
+class BasePostRepository implements PostRepositoryInterface
 {
     protected $model;
     private $returnedMessage = ['status' => 'success', 'message' => 'Great Work', 'data' => ''];

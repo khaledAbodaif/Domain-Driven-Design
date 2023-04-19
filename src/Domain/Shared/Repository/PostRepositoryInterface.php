@@ -1,7 +1,7 @@
 <?php
 
 
-interface RepositoryInterface
+interface PostRepositoryInterface
 {
 
     public function get(array $columns=['*'],array $relations=[],array $appends=[],array $hidden=[]);

@@ -4,7 +4,7 @@ namespace Feature;
 
 use DTO\DTOInterface;
 
-class PostResourceFeature implements \CommentResourceFeature
+class CommentResourceFeature implements \CommentResourceFeature
 {
 
     public function __construct(public DTOInterface $DTO)
