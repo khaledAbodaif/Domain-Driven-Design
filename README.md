@@ -60,37 +60,23 @@ business :i want to create order system that the client order a meal then the wa
 
 developer : create a 2 domains
 
-├── Domain/
+    ├── Domain/
+    │   ├── Order/
+    │   │   ├── Actions/
+    │   │   │   ├── CreateOrder.php
+    │   │   │   ├── OrderFinished.php
+    │   │   │   └── ...
+    │   │   └── Events/
+    │   │       ├── OrderCreated.php
+    │   │       ├── OrderFinished.php
+    │   │       └── ...
+    │   ├── Report/
+    │   │   └── Feature/
+    │   │       ├── DailyReport.php
+    │   │       ├── MonthlyReport.php
+    │   │       └── ...
+    │   └── ...
 
-│   ├── Order/
-
-│   │   ├── Actions/
-
-│   │   │   ├── CreateOrder.php
-
-│   │   │   ├── OrderFinished.php
-
-│   │   │   └── ...
-
-│   │   └── Events/
-
-│   │       ├── OrderCreated.php
-
-│   │       ├── OrderFinished.php
-
-│   │       └── ...
-
-│   ├── Report/
-
-│   │   └── Feature/
-
-│   │       ├── DailyReport.php
-
-│   │       ├── MonthlyReport.php
-
-│   │       └── ...
-
-│   └── ...
 
 **So the business and software in the same line**
 
